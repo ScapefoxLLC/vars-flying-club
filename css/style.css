@@ -86,12 +86,21 @@ a:hover { border-bottom-color: var(--accent); }
 /* Home page. The photo is a real <img> rather than a background, so it is
    never cropped — that keeps the aeroplane whole at every screen width and
    keeps the wordmark up in the clear sky above it. */
+/* The photo runs at 60% of the page width rather than full bleed. The whole
+   block is scaled together — image, wordmark and scrim — so the overlay keeps
+   sitting in the same patch of sky. Below 700px it goes full width again,
+   otherwise it would be postage-stamp sized on a phone. */
 .hero--home {
   display: block;
   min-height: 0;
   padding: 0;
+  margin: 0 auto;
+  max-width: 60%;
   background: #7ea9cd;
 }
+
+.hero--home .wordmark { font-size: clamp(24px, 4.2vw, 38px); }
+.hero--home .hero__sub { font-size: clamp(9px, 1.32vw, 11px); letter-spacing: .24em; margin-top: 12px; }
 
 .hero--home .hero__img { width: 100%; display: block; }
 
@@ -280,6 +289,12 @@ p { margin: 0 0 18px; }
 }
 .footer p { margin: 0 0 7px; }
 .footer a { color: var(--ink-soft); border-bottom-color: rgba(95, 104, 115, .3); }
+
+@media (max-width: 700px) {
+  .hero--home { max-width: 100%; }
+  .hero--home .wordmark { font-size: clamp(30px, 8vw, 44px); }
+  .hero--home .hero__sub { font-size: clamp(10px, 2.4vw, 13px); }
+}
 
 @media (max-width: 600px) {
   body { font-size: 16px; }
