@@ -84,9 +84,6 @@ a:hover { border-bottom-color: var(--accent); }
   background: linear-gradient(180deg, #7ea9cd 0%, #5b87ae 100%);
 }
 
-/* Home page. The photo is a real <img> rather than a background, so it is
-   never cropped — that keeps the aeroplane whole at every screen width and
-   keeps the wordmark up in the clear sky above it. */
 /* ---- Home page photo ----
    The photo is a real <img>, not a background, so it is never cropped — the
    aeroplane stays whole at every width and the wordmark stays in the sky
@@ -317,3 +314,19 @@ p { margin: 0 0 18px; }
 
 /* Spam trap on the contact form. Never shown to people. */
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---------- Video ---------- */
+/* The videos are hosted on Vimeo and embedded here — nothing is stored in
+   this repository. The wrapper keeps each player 16:9 at any width. */
+
+.video { margin: 0 0 40px; }
+.video__frame { position: relative; padding-top: 56.25%; background: var(--paper-alt); }
+.video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video figcaption {
+  margin-top: 10px;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
