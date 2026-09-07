@@ -1,5 +1,5 @@
 /* Valley Aircraft Restoration Society — site styles
-   Plain CSS, no build step. Edit the colours in :root below. */
+   Plain CSS, no build step. Edit the colors in :root below. */
 
 :root {
   --ink:        #1f2328;   /* body text */
@@ -86,7 +86,7 @@ a:hover { border-bottom-color: var(--accent); }
 
 /* ---- Home page photo ----
    The photo is a real <img>, not a background, so it is never cropped — the
-   aeroplane stays whole at every width and the wordmark stays in the sky
+   airplane stays whole at every width and the wordmark stays in the sky
    above it.
 
    >>> To resize the photo, change --hero-width and nothing else. <<<
@@ -118,7 +118,7 @@ a:hover { border-bottom-color: var(--accent); }
   padding: 4.5% 20px 0;
 }
 
-/* Scrim covers only the top band, so the aeroplane below stays bright. */
+/* Scrim covers only the top band, so the airplane below stays bright. */
 .hero--home::after {
   content: "";
   position: absolute;

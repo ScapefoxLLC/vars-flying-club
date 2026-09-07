@@ -15,7 +15,7 @@ video.html         Video — empty for now, waiting on footage
 for-members.html   Reservations and dues
 contact.html       Contact form
 thanks.html        Shown after the contact form is submitted
-css/style.css      All styling (colours live in the :root block at the top)
+css/style.css      All styling (colors live in the :root block at the top)
 images/            Site images. hero.jpg is the big homepage photo.
 images/gallery/    Photographs page images
 images/history/    History page archival images
