@@ -54,7 +54,9 @@
        Get one free at https://web3forms.com — enter the address that should
        receive enquiries and they email the key straight back.
 
-       Also update the "redirect" field to the final domain once it is known.
+       The "redirect" below points at the GitHub Pages address the site is
+       reviewed on. Change it to the real domain at cutover, or people will
+       land on the review URL after sending.
 
        After sending, people land on thanks.html — that is what "redirect" does.
        ============================================================ -->
@@ -63,7 +65,7 @@
     <input type="hidden" name="access_key" value="REPLACE-WITH-YOUR-WEB3FORMS-ACCESS-KEY">
     <input type="hidden" name="subject" value="Enquiry from the VARS Flying Club website">
     <input type="hidden" name="from_name" value="VARS Flying Club website">
-    <input type="hidden" name="redirect" value="https://varsflyingclub.org/thanks.html">
+    <input type="hidden" name="redirect" value="https://scapefoxllc.github.io/vars-flying-club/thanks.html">
 
     <!-- Spam trap. People never see it; bots fill it in and get rejected. -->
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
