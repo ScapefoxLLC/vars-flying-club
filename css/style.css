@@ -1,0 +1,296 @@
+/* Valley Aircraft Restoration Society — site styles
+   Plain CSS, no build step. Edit the colours in :root below. */
+
+:root {
+  --ink:        #1f2328;   /* body text */
+  --ink-soft:   #5f6873;
+  --rule:       #e2ddd4;
+  --paper:      #fdfcfa;   /* warm off-white, as on the old site */
+  --paper-alt:  #f4f1eb;
+  --accent:     #7a5c2e;   /* aged brass — used sparingly for links */
+  --accent-dim: rgba(122, 92, 46, .35);
+  --display: "Cinzel", "Trajan Pro", Optima, "Palatino Linotype", Palatino, Georgia, serif;
+  --serif:   "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans:    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-dim); }
+a:hover { border-bottom-color: var(--accent); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Masthead: wordmark + navigation ---------- */
+
+.masthead {
+  background: var(--paper);
+  padding: 28px 20px 18px;
+  text-align: center;
+}
+
+.masthead__mark {
+  display: inline-block;
+  border-bottom: none;
+  font-family: var(--display);
+  font-size: 26px;
+  letter-spacing: .22em;
+  color: var(--ink);
+}
+
+.nav { margin-top: 20px; }
+.nav ul {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 6px 26px;
+}
+.nav a {
+  font-size: 15px;
+  letter-spacing: .03em;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+.nav a:hover,
+.nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+
+/* ---------- Hero ---------- */
+/* Background photo is images/hero.jpg — swap that file to change it. */
+
+/* Inner pages get a plain sky band behind the page title. */
+.hero {
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  color: #fff;
+  background: linear-gradient(180deg, #7ea9cd 0%, #5b87ae 100%);
+}
+
+/* Home page. The photo is a real <img> rather than a background, so it is
+   never cropped — that keeps the aeroplane whole at every screen width and
+   keeps the wordmark up in the clear sky above it. */
+.hero--home {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  background: #7ea9cd;
+}
+
+.hero--home .hero__img { width: 100%; display: block; }
+
+.hero--home .hero__inner {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 1;
+  padding: 4.5% 20px 0;
+}
+
+/* Scrim covers only the top band, so the aeroplane below stays bright. */
+.hero--home::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 46%;
+  background: linear-gradient(180deg, rgba(18,26,36,.52) 0%, rgba(18,26,36,.24) 55%, rgba(18,26,36,0) 100%);
+}
+
+.hero__inner { position: relative; z-index: 1; }
+
+.wordmark {
+  font-family: var(--display);
+  font-size: clamp(34px, 7vw, 62px);
+  font-weight: 400;
+  letter-spacing: .16em;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.hero__sub {
+  font-family: var(--display);
+  font-size: clamp(13px, 2.2vw, 17px);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  margin: 20px 0 0;
+  color: #fff;
+}
+
+.hero__tagline {
+  max-width: 34em;
+  margin: 22px auto 0;
+  font-size: 18px;
+  color: #f2efe9;
+}
+
+/* ---------- Page body ---------- */
+
+.wrap { max-width: 46rem; margin: 0 auto; padding: 54px 20px 70px; }
+.wrap--wide { max-width: 68rem; }
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: .06em;
+  line-height: 1.2;
+  color: var(--ink);
+  text-wrap: balance;
+}
+h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 26px; }
+h2 { font-size: 25px; margin: 44px 0 16px; }
+h3 { font-size: 19px; letter-spacing: .09em; text-transform: uppercase; margin: 34px 0 12px; }
+
+p { margin: 0 0 18px; }
+
+.lede { font-family: var(--serif); font-size: 20px; line-height: 1.55; color: var(--ink); }
+
+.page-sub {
+  margin: -18px 0 30px;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------- Fact list and callout ---------- */
+
+.facts { list-style: none; margin: 26px 0; padding: 0; border-top: 1px solid var(--rule); }
+.facts li { padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.facts strong { font-weight: 600; }
+
+.callout {
+  margin: 30px 0;
+  padding: 18px 22px;
+  background: var(--paper-alt);
+  border-left: 3px solid var(--accent);
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.notice {
+  margin: 0 0 30px;
+  padding: 18px 22px;
+  background: #f6efe2;
+  border-left: 3px solid #b08333;
+}
+.notice p:last-child { margin-bottom: 0; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: var(--ink);
+  color: #fff;
+  border-bottom: none;
+  font-size: 15px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.btn:hover { background: var(--accent); border-bottom: none; }
+
+/* ---------- Galleries ---------- */
+
+.gallery {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.gallery figure { margin: 0; }
+.gallery a { display: block; border-bottom: none; }
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-alt);
+  border: 1px solid var(--rule);
+}
+.gallery a:hover img { border-color: var(--accent); }
+
+.gallery--dense { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
+
+/* ---------- Pricing rows (For Members) ---------- */
+
+.rows { border-top: 1px solid var(--rule); margin: 26px 0; }
+.row {
+  display: flex; flex-wrap: wrap; gap: 4px 20px;
+  justify-content: space-between; align-items: baseline;
+  padding: 14px 0; border-bottom: 1px solid var(--rule);
+}
+.row__label { font-weight: 600; }
+.row__value { font-variant-numeric: tabular-nums; }
+.row__note { flex-basis: 100%; font-size: 15px; color: var(--ink-soft); }
+
+/* ---------- Contact form ---------- */
+
+.form { margin: 26px 0 0; display: grid; gap: 16px; max-width: 34rem; }
+.form label { display: grid; gap: 6px; font-size: 15px; letter-spacing: .02em; }
+.form input, .form textarea {
+  font: inherit; font-size: 16px;
+  padding: 11px 12px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.form input:focus, .form textarea:focus { border-color: var(--accent); outline: none; }
+.form textarea { min-height: 150px; resize: vertical; }
+.form button {
+  justify-self: start;
+  padding: 12px 30px;
+  font: inherit; font-size: 15px;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: #fff; background: var(--ink);
+  border: none; border-radius: 2px; cursor: pointer;
+}
+.form button:hover { background: var(--accent); }
+
+.map {
+  width: 100%; height: 380px;
+  margin: 26px 0 0;
+  border: 1px solid var(--rule);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  border-top: 1px solid var(--rule);
+  background: var(--paper-alt);
+  padding: 30px 20px 38px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.footer p { margin: 0 0 7px; }
+.footer a { color: var(--ink-soft); border-bottom-color: rgba(95, 104, 115, .3); }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .wrap { padding: 40px 18px 56px; }
+  .nav ul { gap: 4px 18px; }
+  .masthead__mark { font-size: 21px; }
+}
+
+/* Shorter hero used as a page banner on inner pages. */
+.hero.banner { min-height: 28vh; padding: 46px 20px; }
+.hero.banner .wordmark { font-size: clamp(28px, 5vw, 44px); }
+
+/* Spam trap on the contact form. Never shown to people. */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

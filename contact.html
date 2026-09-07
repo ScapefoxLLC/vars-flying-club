@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | VARS Flying Club</title>
+<meta name="description" content="Get in touch with the Valley Aircraft Restoration Society flying club at Falcon Field, Mesa, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <a class="masthead__mark" href="index.html">V.A.R.S.</a>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="photographs.html">Photographs</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="for-members.html">For Members</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero banner">
+  <div class="hero__inner">
+    <h1 class="wordmark">Contact Us</h1>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <p class="lede">Fill out the information below and we will get back to you as soon as
+  we can.</p>
+
+  <p>If you are applying for membership, please use the
+  <a href="join.html">application form on the Join page</a> instead &mdash; it asks the
+  questions we need answered.</p>
+
+  <!-- ============================================================
+       This form posts to Web3Forms, which emails each submission to the
+       address the access key below is registered to. Nothing is stored on
+       our own server, and no server-side code is involved.
+
+       The access key is not a secret — it only says where to deliver mail.
+
+       >>> REPLACE THE ACCESS KEY BELOW BEFORE GOING LIVE. <<<
+       Get one free at https://web3forms.com — enter the address that should
+       receive enquiries and they email the key straight back.
+
+       Also update the "redirect" field to the final domain once it is known.
+
+       After sending, people land on thanks.html — that is what "redirect" does.
+       ============================================================ -->
+  <form class="form" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="REPLACE-WITH-YOUR-WEB3FORMS-ACCESS-KEY">
+    <input type="hidden" name="subject" value="Enquiry from the VARS Flying Club website">
+    <input type="hidden" name="from_name" value="VARS Flying Club website">
+    <input type="hidden" name="redirect" value="https://varsflyingclub.org/thanks.html">
+
+    <!-- Spam trap. People never see it; bots fill it in and get rejected. -->
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+    <label for="f-name">Your name
+      <input id="f-name" name="name" type="text" autocomplete="name" required>
+    </label>
+
+    <label for="f-email">Email
+      <input id="f-email" name="email" type="email" autocomplete="email" required>
+    </label>
+
+    <label for="f-phone">Phone (optional)
+      <input id="f-phone" name="phone" type="text" autocomplete="tel">
+    </label>
+
+    <label for="f-subject">Subject
+      <input id="f-subject" name="subject_line" type="text">
+    </label>
+
+    <label for="f-message">Message
+      <textarea id="f-message" name="message" required></textarea>
+    </label>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <h2>Where we are</h2>
+
+  <p>Falcon Field Airport (KFFZ), Mesa, Arizona. The club hangar is reached through the
+  entry gate &mdash;
+  <a href="https://goo.gl/maps/TTKYU6vAezL2" target="_blank" rel="noopener">see it on Google Maps</a>.</p>
+
+</main>
+
+<footer class="footer">
+  <p>Valley Aircraft Restoration Society &middot; Falcon Field (KFFZ) &middot; Mesa, Arizona</p>
+  <p><a href="contact.html">Contact</a> &middot; <a href="https://www.aircraftclubs.com" target="_blank" rel="noopener">Member Login</a></p>
+  <p>&copy; 2026 Valley Aircraft Restoration Society. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
