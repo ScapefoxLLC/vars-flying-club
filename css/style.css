@@ -330,3 +330,48 @@ p { margin: 0 0 18px; }
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+
+/* ---------- Giving back ---------- */
+/* The charity work gets its own orange block so it stands out from the text
+   around it. These oranges are defined here rather than in :root because this
+   is the only place on the site that uses them. */
+
+.giving {
+  margin: 36px 0;
+  padding: 24px 28px 26px;
+  background: #fff3e4;
+  border: 1px solid #f2c793;
+  border-left: 5px solid #d9720f;
+}
+
+.giving h3 {
+  margin: 0 0 14px;
+  font-size: 19px;
+  letter-spacing: .12em;
+  color: #a8500a;
+}
+
+.giving p { margin: 0 0 14px; }
+.giving p:last-of-type { margin-bottom: 16px; }
+
+.giving__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 10px;
+}
+
+.giving__list li {
+  padding: 7px 15px;
+  background: #fff;
+  border: 1px solid #e9b271;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #8a4408;
+}
+
+.giving__list a { color: inherit; border-bottom: none; }
+.giving__list li:hover { border-color: #d9720f; }
