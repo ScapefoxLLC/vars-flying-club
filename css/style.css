@@ -398,3 +398,19 @@ p { margin: 0 0 18px; }
   font-size: 14px;
   color: #c7ccd2;
 }
+
+/* ---------- Archive banner ---------- */
+/* Sits above the masthead on every page under /old/, so an archived page is
+   never mistaken for current information. */
+
+.archive-bar {
+  background: #5b2d2d;
+  color: #fbeeee;
+  padding: 12px 20px;
+  font-size: 15px;
+  text-align: center;
+}
+.archive-bar p { margin: 0 auto; max-width: 62rem; }
+.archive-bar strong { color: #fff; }
+.archive-bar a { color: #fff; border-bottom-color: rgba(255,255,255,.5); white-space: nowrap; }
+.archive-bar a:hover { border-bottom-color: #fff; }

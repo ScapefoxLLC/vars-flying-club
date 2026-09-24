@@ -79,3 +79,14 @@ Nothing here runs on a server. Three things live elsewhere:
   the navigation and the For Members page.
 - **Membership application** — a Google Form, linked from the Join page.
 - **Contact form** — posts to Web3Forms, which emails each submission on.
+
+## The archived site — `/old/`
+
+`old/` holds a copy of the Wix site as it stood before the 2026 rebuild, at
+<https://varsflyingclub.com/old/>. The text is reproduced as it was written,
+so the fees and availability there are out of date. Every page in that folder
+carries a `noindex` tag and a banner saying so, which is why search engines
+never surface it.
+
+It stores **no images of its own** — those pages link up to `../images/photos/`,
+the same files the live site uses.
