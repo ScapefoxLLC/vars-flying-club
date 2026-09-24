@@ -375,3 +375,26 @@ p { margin: 0 0 18px; }
 
 .giving__list a { color: inherit; border-bottom: none; }
 .giving__list li:hover { border-color: #d9720f; }
+
+/* ---------- Archive shelf ---------- */
+/* The bar that divides the featured photographs from the full archive
+   below them. */
+
+.shelf {
+  margin: 56px 0 10px;
+  padding: 16px 22px;
+  background: var(--ink);
+  color: #fff;
+}
+.shelf h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.shelf p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  color: #c7ccd2;
+}
