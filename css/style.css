@@ -414,3 +414,60 @@ p { margin: 0 0 18px; }
 .archive-bar strong { color: #fff; }
 .archive-bar a { color: #fff; border-bottom-color: rgba(255,255,255,.5); white-space: nowrap; }
 .archive-bar a:hover { border-bottom-color: #fff; }
+
+/* ---------- Long application form ---------- */
+
+.form--long { max-width: 44rem; gap: 0; }
+
+.form--long fieldset {
+  margin: 0 0 36px;
+  padding: 0 0 8px;
+  border: none;
+  border-top: 2px solid var(--ink);
+}
+.form--long legend {
+  padding: 0 14px 0 0;
+  font-family: var(--display);
+  font-size: 17px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.field { display: block; margin: 0 0 22px; }
+.field__label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.field__label abbr {
+  color: #b0402a;
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+}
+
+.form--long input[type="text"],
+.form--long textarea {
+  width: 100%;
+  font: inherit; font-size: 16px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.form--long input[type="text"]:focus,
+.form--long textarea:focus { border-color: var(--accent); outline: none; }
+.form--long textarea { resize: vertical; }
+
+.choices { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.choice {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 15px; cursor: pointer;
+}
+.choice input { margin: 0; }
+
+.form--long button { margin-top: 6px; }

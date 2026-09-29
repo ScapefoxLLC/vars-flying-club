@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply | VARS Flying Club</title>
+<meta name="description" content="Membership application for the Valley Aircraft Restoration Society flying club at Falcon Field, Mesa, Arizona.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <a class="masthead__mark" href="index.html">V.A.R.S.</a>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="photographs.html">Photographs</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="for-members.html">For Members</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero banner">
+  <div class="hero__inner">
+    <h1 class="wordmark">Membership Application</h1>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <p class="lede">This is the club's prospective member profile. It is long, deliberately
+  &mdash; we would rather understand a pilot properly than rush the process.</p>
+
+  <div class="notice">
+    <p>Our membership is currently full, with a short wait list. We still read every
+    application. Questions marked <abbr title="required">*</abbr> are required.</p>
+  </div>
+
+  <!-- ============================================================
+       Posts to Web3Forms, which emails each application on. The access
+       key is not a secret — it only says which mailbox to deliver to.
+
+       >>> This currently goes to the same mailbox as the contact form. <<<
+       To send applications somewhere else, get a second key at
+       https://web3forms.com and replace it below. Best practice is to
+       point it at a group address that forwards to the whole membership
+       committee, so it never depends on one person's account.
+       ============================================================ -->
+  <form class="form form--long" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="f3547748-3929-4799-b546-ac9b09d8d53d">
+    <input type="hidden" name="subject" value="Membership application from the VARS website">
+    <input type="hidden" name="from_name" value="VARS Flying Club website">
+    <input type="hidden" name="redirect" value="https://varsflyingclub.com/applied.html">
+
+    <!-- Spam trap. People never see it; bots fill it in and get rejected. -->
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+    <fieldset>
+      <legend>Your details</legend>
+      <label class="field" for="q1">
+        <span class="field__label">Name (Last, First) <abbr title="required">*</abbr></span>
+        <input id="q1" name="Name (Last, First)" type="text" required>
+      </label>
+      <label class="field" for="q2">
+        <span class="field__label">Address, City, State, Zip <abbr title="required">*</abbr></span>
+        <textarea id="q2" name="Address, City, State, Zip" required rows="3"></textarea>
+      </label>
+      <label class="field" for="q3">
+        <span class="field__label">Phone # <abbr title="required">*</abbr></span>
+        <input id="q3" name="Phone #" type="text" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>About You</legend>
+      <label class="field" for="q4">
+        <span class="field__label">What is your primary reason for wanting to joinin a flying club?</span>
+        <textarea id="q4" name="What is your primary reason for wanting to joinin a flying club?" rows="3"></textarea>
+      </label>
+      <label class="field" for="q5">
+        <span class="field__label">Year you obtained certificate <abbr title="required">*</abbr></span>
+        <input id="q5" name="Year you obtained certificate" type="text" required>
+      </label>
+      <label class="field" for="q6">
+        <span class="field__label">Type of certificate <abbr title="required">*</abbr></span>
+        <input id="q6" name="Type of certificate" type="text" required>
+      </label>
+      <label class="field" for="q7">
+        <span class="field__label">Date of last Medical issued <abbr title="required">*</abbr></span>
+        <input id="q7" name="Date of last Medical issued" type="text" required>
+      </label>
+      <label class="field" for="q8">
+        <span class="field__label">Date of last Flight Review completed <abbr title="required">*</abbr></span>
+        <input id="q8" name="Date of last Flight Review completed" type="text" required>
+      </label>
+      <div class="field" role="group" aria-labelledby="q9-label">
+        <span class="field__label" id="q9-label">Select advanced ratings you may have achieved</span>
+        <div class="choices"><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="Instrument"> Instrument</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="Commercial"> Commercial</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="CFI"> CFI</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="CFII"> CFII</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="Multi-Engine"> Multi-Engine</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="High Perfomance endorsement"> High Perfomance endorsement</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="Complex endorsement"> Complex endorsement</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="Tail wheel endorsement"> Tail wheel endorsement</label><label class="choice"><input type="checkbox" name="Select advanced ratings you may have achieved" value="A&P"> A&P</label></div>
+      </div>
+      <label class="field" for="q10">
+        <span class="field__label">Total Hours <abbr title="required">*</abbr></span>
+        <input id="q10" name="Total Hours" type="text" required>
+      </label>
+      <label class="field" for="q11">
+        <span class="field__label">Hours past 12 months <abbr title="required">*</abbr></span>
+        <input id="q11" name="Hours past 12 months" type="text" required>
+      </label>
+      <label class="field" for="q12">
+        <span class="field__label">Total night time hours <abbr title="required">*</abbr></span>
+        <input id="q12" name="Total night time hours" type="text" required>
+      </label>
+      <label class="field" for="q13">
+        <span class="field__label">Total cross country hours <abbr title="required">*</abbr></span>
+        <input id="q13" name="Total cross country hours" type="text" required>
+      </label>
+      <div class="field" role="group" aria-labelledby="q14-label">
+        <span class="field__label" id="q14-label">Do you have mountain flying experience? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Do you have mountain flying experience?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Do you have mountain flying experience?" value="No" required> No</label></div>
+      </div>
+      <div class="field" role="group" aria-labelledby="q15-label">
+        <span class="field__label" id="q15-label">Have you ever failed a checkride for any certificate or rating? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Have you ever failed a checkride for any certificate or rating?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Have you ever failed a checkride for any certificate or rating?" value="No" required> No</label></div>
+      </div>
+      <label class="field" for="q16">
+        <span class="field__label">If Yes, how many times?</span>
+        <input id="q16" name="If Yes, how many times?" type="text">
+      </label>
+      <div class="field" role="group" aria-labelledby="q17-label">
+        <span class="field__label" id="q17-label">Have you ever had your pilot or medical certificate revoked or suspended? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Have you ever had your pilot or medical certificate revoked or suspended?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Have you ever had your pilot or medical certificate revoked or suspended?" value="No" required> No</label></div>
+      </div>
+      <label class="field" for="q18">
+        <span class="field__label">If Yes, briefly explain</span>
+        <textarea id="q18" name="If Yes, briefly explain" rows="3"></textarea>
+      </label>
+      <label class="field" for="q19">
+        <span class="field__label">Occupation <abbr title="required">*</abbr></span>
+        <input id="q19" name="Occupation" type="text" required>
+      </label>
+      <label class="field" for="q20">
+        <span class="field__label">Previous Club Affiliations <abbr title="required">*</abbr></span>
+        <input id="q20" name="Previous Club Affiliations" type="text" required>
+      </label>
+      <div class="field" role="group" aria-labelledby="q21-label">
+        <span class="field__label" id="q21-label">Current member of any of the following:</span>
+        <div class="choices"><label class="choice"><input type="checkbox" name="Current member of any of the following:" value="AOPA"> AOPA</label><label class="choice"><input type="checkbox" name="Current member of any of the following:" value="EAA"> EAA</label><label class="choice"><input type="checkbox" name="Current member of any of the following:" value="AZ Pilots Association"> AZ Pilots Association</label></div>
+      </div>
+      <label class="field" for="q22">
+        <span class="field__label">Types of Aircraft Flown <abbr title="required">*</abbr></span>
+        <input id="q22" name="Types of Aircraft Flown" type="text" required>
+      </label>
+      <div class="field" role="group" aria-labelledby="q23-label">
+        <span class="field__label" id="q23-label">Have you ever owned an aircraft (whole or partial ownership)? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Have you ever owned an aircraft (whole or partial ownership)?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Have you ever owned an aircraft (whole or partial ownership)?" value="No" required> No</label></div>
+      </div>
+      <label class="field" for="q24">
+        <span class="field__label">If Yes, Please tell us about it</span>
+        <textarea id="q24" name="If Yes, Please tell us about it" rows="3"></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>About the Club</legend>
+      <div class="field" role="group" aria-labelledby="q25-label">
+        <span class="field__label" id="q25-label">Will you be using the aircraft for occasional business? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Will you be using the aircraft for occasional business?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Will you be using the aircraft for occasional business?" value="No" required> No</label></div>
+      </div>
+      <label class="field" for="q26">
+        <span class="field__label">If Yes, approximately how many hours per month?</span>
+        <input id="q26" name="If Yes, approximately how many hours per month?" type="text">
+      </label>
+      <div class="field" role="group" aria-labelledby="q27-label">
+        <span class="field__label" id="q27-label">Do you plan to or want to fly the plane to Mexico? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Do you plan to or want to fly the plane to Mexico?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Do you plan to or want to fly the plane to Mexico?" value="No" required> No</label></div>
+      </div>
+      <label class="field" for="q28">
+        <span class="field__label">How many hours per month do you anticipate using the aircraft? <abbr title="required">*</abbr></span>
+        <input id="q28" name="How many hours per month do you anticipate using the aircraft?" type="text" required>
+      </label>
+      <label class="field" for="q29">
+        <span class="field__label">When do you plan on using the plane the most? <abbr title="required">*</abbr></span>
+        <input id="q29" name="When do you plan on using the plane the most?" type="text" required>
+      </label>
+      <label class="field" for="q30">
+        <span class="field__label">Will you want to take the plane for overnight trips? If so, how often? <abbr title="required">*</abbr></span>
+        <input id="q30" name="Will you want to take the plane for overnight trips? If so, how often?" type="text" required>
+      </label>
+      <div class="field" role="group" aria-labelledby="q31-label">
+        <span class="field__label" id="q31-label">Will you be available to help participate with occasional aircraft maintenance, washing of the plane, and hangar cleaning? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Will you be available to help participate with occasional aircraft maintenance, washing of the plane, and hangar cleaning?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Will you be available to help participate with occasional aircraft maintenance, washing of the plane, and hangar cleaning?" value="No" required> No</label></div>
+      </div>
+      <div class="field" role="group" aria-labelledby="q32-label">
+        <span class="field__label" id="q32-label">Will you be able to commit to attending monthly meetings once a month? <abbr title="required">*</abbr></span>
+        <div class="choices"><label class="choice"><input type="radio" name="Will you be able to commit to attending monthly meetings once a month?" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="Will you be able to commit to attending monthly meetings once a month?" value="No" required> No</label></div>
+      </div>
+      <label class="field" for="q33">
+        <span class="field__label">We occassionally upgrade or require occasional out of pocket assessment from the members. How do you feel about contributing once in a while for upgrades or required assessments to the aircraft? <abbr title="required">*</abbr></span>
+        <textarea id="q33" name="We occassionally upgrade or require occasional out of pocket assessment from the members. How do you feel about contributing once in a while for upgrades or required assessments to the aircraft?" required rows="3"></textarea>
+      </label>
+      <label class="field" for="q34">
+        <span class="field__label">Comments?</span>
+        <textarea id="q34" name="Comments?" rows="3"></textarea>
+      </label>
+    </fieldset>
+
+    <button type="submit">Send application</button>
+  </form>
+
+</main>
+
+<footer class="footer">
+  <p>Valley Aircraft Restoration Society &middot; Falcon Field (KFFZ) &middot; Mesa, Arizona</p>
+  <p><a href="contact.html">Contact</a> &middot; <a href="https://www.aircraftclubs.com" target="_blank" rel="noopener">Member Login</a></p>
+  <p>&copy; 2026 Valley Aircraft Restoration Society. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
