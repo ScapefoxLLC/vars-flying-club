@@ -48,15 +48,14 @@
        Posts to Web3Forms, which emails each application on. The access
        key is not a secret — it only says which mailbox to deliver to.
 
-       >>> This currently goes to the same mailbox as the contact form. <<<
-       To send applications somewhere else, get a second key at
-       https://web3forms.com and replace it below. Best practice is to
-       point it at a group address that forwards to the whole membership
-       committee, so it never depends on one person's account.
+       This key is registered to applications@varsflyingclub.com, which
+       Cloudflare Email Routing fans out to the membership committee. To
+       change who receives applications, edit the routing rule in
+       Cloudflare — nothing on this page needs to change.
        ============================================================ -->
   <form class="form form--long" action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="hidden" name="access_key" value="f3547748-3929-4799-b546-ac9b09d8d53d">
+    <input type="hidden" name="access_key" value="c3b797b6-dd1e-4e23-ab02-34333fad2e37">
     <input type="hidden" name="subject" value="Membership application from the VARS website">
     <input type="hidden" name="from_name" value="VARS Flying Club website">
     <input type="hidden" name="redirect" value="https://varsflyingclub.com/applied.html">
